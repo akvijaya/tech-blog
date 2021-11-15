@@ -1,9 +1,9 @@
 
 $(".saveBtn").on("click", function () {
-    var text = $(this).siblings("#value").val();
+    var value = $(this).siblings("#value").val();
     var time = $(this).parent().attr("id");
 
-    localStorage.setItem(time, text);
+    localStorage.setItem(time, value);
 });
 
 function showDate (){
@@ -14,7 +14,6 @@ function hourbyhourDisplay() {
 
     var currentBlock = moment().hours();
 
-    // loop over time blocks
     $(".time-block").each(function () {
         var timeBlock = parseInt($(this).attr("id"));
 
